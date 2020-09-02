@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: zhao-nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.130:8848
+    sentinel:
+      transport:
+        port: 8720
+        dashboard: 192.168.92.130:8588
+
+server:
+  port: 8082
+
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

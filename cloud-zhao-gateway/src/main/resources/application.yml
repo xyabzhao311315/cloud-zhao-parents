@@ -1,0 +1,37 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: spring-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.130:8848
+    sentinel:
+      transport:
+        port: 8780
+        dashboard: 192.168.92.130:8858
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: NACOS-CONSUMER
+          uri: lb://zhao-nacos-consumer
+          predicates:
+            - Method=GET,POST
+
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

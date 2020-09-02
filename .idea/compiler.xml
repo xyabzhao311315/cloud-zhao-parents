@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-zhao-nacos-providers" />
+        <module name="cloud-zhao-nacos-config" />
+        <module name="cloud-zhao-gateway" />
+        <module name="cloud-zhao-nacos-consumers" />
+        <module name="cloud-zhao-nacos-consumers-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-zhao-nacos-commons" target="11" />
+      <module name="cloud-zhao-nacos-consumers-api" target="11" />
+      <module name="untitled" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-zhao-gateway" options="-parameters" />
+      <module name="cloud-zhao-nacos-commons" options="-parameters" />
+      <module name="cloud-zhao-nacos-config" options="-parameters" />
+      <module name="cloud-zhao-nacos-consumers" options="-parameters" />
+      <module name="cloud-zhao-nacos-consumers-api" options="-parameters" />
+      <module name="cloud-zhao-nacos-providers" options="-parameters" />
+      <module name="cloud-zhao-parents" options="" />
+    </option>
+  </component>
+</project>
